@@ -72,7 +72,7 @@ module.exports.processLoginPage = (req, res, next) => {
 
            
 
-            return res.redirect('/survey/add');
+            return res.redirect('/');
         });
     })(req, res, next);
 }
