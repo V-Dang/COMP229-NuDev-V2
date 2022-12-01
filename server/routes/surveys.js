@@ -5,28 +5,34 @@ let mongoose = require("mongoose");
 
 let passport = require('passport');
 
-//connect to Books model
-//let Book = require("../models/book");
+function requireAuth(req, res, next)
+{
+  if (!req.isAuthenticated())
+  {
+    return res.redirect('/login');
+  }
+  next();
+}
 
 let surveyController = require('../controllers/surveys');
 
 router.get('/', surveyController.displaySurveyList);
 
-router.get('/take/:id', surveyController.displayTakeSurveyPage);
+router.get('/take/:id', requireAuth, surveyController.displayTakeSurveyPage);
 
-router.get('/edit/:id', surveyController.displayEditSurveyPage);
+router.get('/edit/:id', requireAuth, surveyController.displayEditSurveyPage);
 
-router.post('/edit/:id', surveyController.processEditSurveyPage);
+router.post('/edit/:id', requireAuth, surveyController.processEditSurveyPage);
 
   
   //  GET the Survey Details page in order to add a new Survey
-  router.get("/add", surveyController.addpage);
+  router.get("/add", requireAuth, surveyController.addpage);
   
   // POST process the Survey  Details page and create a new Survey  - CREATE operation
-  router.post("/add", surveyController.addprocesspage);
+  router.post("/add", requireAuth, surveyController.addprocesspage);
 
   
   // GET - process the delete - DELETE operation
-router.get("/delete/:id", surveyController.deletepage );
+router.get("/delete/:id", requireAuth, surveyController.deletepage );
 
 module.exports = router;
