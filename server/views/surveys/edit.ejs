@@ -1,0 +1,88 @@
+<%- include ('../partials/header.ejs') %> <%- include ('../partials/main_nav.ejs') %>
+
+<!-- Content  for the add page -->
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <h1><%=title %></h1>
+
+      <form class="form" method="post">
+        <div class="from-group">
+            <label for="survey_name">Survey Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="survey_name"
+              placeholder=""
+              name="survey_name"
+              value="<%= editsurvey.survey_name %>"
+              required
+            />
+        </div>
+
+        <div class="from-group">
+          <label for="survey_subject">Survey Subject</label>
+          <input
+            type="text"
+            class="form-control"
+            id="survey_subject"
+            placeholder=""
+            name="survey_subject"
+            value="<%= editsurvey.survey_subject %>"
+            required
+          />
+        </div>
+
+        <div class="from-group">
+          <label for="q1">Question 1</label>
+          <input
+            type="text"
+            class="form-control"
+            id="q1"
+            placeholder=""
+            name="q1"
+            value="<%= editsurvey.q1 %>"
+            required
+          />
+        </div>
+
+        <div class="from-group">
+          <label for="q2">Question 2</label>
+          <input
+            type="text"
+            class="form-control"
+            id="q2"
+            placeholder=""
+            name="q2"
+            value="<%= editsurvey.q2 %>"
+            required
+          />
+        </div>
+
+        <div class="from-group">
+          <label for="q3">Question 3</label>
+          <input
+            type="text"
+            class="form-control"
+            id="q3"
+            placeholder=""
+            name="q3"
+            value="<%= editsurvey.q3 %>"
+            required
+          />
+        </div>
+
+
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-edit"></i>Submit
+        </button>
+
+        <a href="/survey" class="btn btn-warning">
+          <i class="fas fa-undo"></i>Cancel
+        </a>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include ('../partials/bottom_nav.ejs') %> <%- include ('../partials/footer.ejs') %>

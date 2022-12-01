@@ -1,0 +1,35 @@
+<%- include ('partials/header.ejs') %>
+
+<%- include ('partials/main_nav.ejs') %>
+  
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to the NuDev <%= title %> Page</h1>
+      <p>Here at NuDev, we give you a list of user-created surveys for you to take anonymously. 
+        Alternatively, after registering an account with us, you can create your own survey!</p>
+    </div>
+  </main>
+
+  <div class="p-5 text-center bg-image rounded-3" style="
+  background-image: url('https://venngage-wordpress.s3.amazonaws.com/uploads/2016/04/survey.png');
+  background-size:100% 100%;
+">
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="text-white">
+      <h1 class="mb-3">Lets Get Started Here</h1>
+      <h4 class="mb-3">Click The Buttons To Login or Register </h4>
+      <a class="btn btn-outline-light btn-lg" href="/login" role="button">Login</a>
+      <a class="btn btn-outline-light btn-lg" href="/register" role="button">Register</a>
+      
+    </div>
+  </div>
+</div>
+</div>
+  
+<%- include ('partials/bottom_nav.ejs') %>  
+
+<%- include ('partials/footer.ejs') %>
+  

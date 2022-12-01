@@ -1,0 +1,56 @@
+<!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h1><a class="navbar-brand" href="/"><img src="Assets/images/ndlogo.png" width="50%" /> NuDev</a></h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <% if (title == "Home"){ %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i> Home </a>
+        </li>
+
+
+        <% if (title == "Take Survey") { %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <a class="nav-link" href="/survey"><i class="fab fa-elementor"></i> Take Survey </a>
+          <% } else  { %>
+            <a class="nav-link" href="/login"><i class="fas fa-user-cog"></i> Take Survey </a>
+          <% } %>
+        </li>
+
+        <% if (title == "Create Survey") { %>
+        <li class="nav-item active">
+        <% } else  { %>
+        <li class="nav-item">
+        <% } %>
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <a class="nav-link" href="/survey/add"><i class="fas fa-user-cog"></i> Create Survey </a>
+            <% } else  { %>
+             <a class="nav-link" href="/login"><i class="fas fa-user-cog"></i> Create Survey </a>
+           <% } %>
+        </li>
+
+    
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+            <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+        <% } else { %>
+          <li class="nav-item"><a href="/login" class="nav-link">
+            <i class=""></i></a></li>
+        <% } %>
+  
+    </div>
+  </nav>
