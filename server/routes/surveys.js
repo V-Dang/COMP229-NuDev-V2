@@ -20,6 +20,10 @@ router.get('/', surveyController.displaySurveyList);
 
 router.get('/take/:id', requireAuth, surveyController.displayTakeSurveyPage);
 
+router.post('/take/:id', requireAuth, surveyController.processTakeSurveyPage);
+
+router.get('/answer/:id', requireAuth, surveyController.displayAnswerPage);
+
 router.get('/edit/:id', requireAuth, surveyController.displayEditSurveyPage);
 
 router.post('/edit/:id', requireAuth, surveyController.processEditSurveyPage);

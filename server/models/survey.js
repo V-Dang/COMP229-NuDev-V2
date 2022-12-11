@@ -14,6 +14,9 @@ let surveyModel = mongoose.Schema(
         q1: String,
         q2: String,
         q3: String,
+        a1: String,
+        a2: String,
+        a3: String
     },
 
     {

@@ -18,24 +18,26 @@
         <form class="form" method="post">
             <div class="from-group">
               <h4 for="nameTextField"><%= takesurvey.q1 %></h4>
-              <input name="q1" type="radio" value="yes">
+              <input name="a1" type="radio" value="yes">
               <label>YES</label><br>
-              <input name="q1" type="radio" value="yes">
+              <input for="a1" name="a1" type="radio" value="no">
               <label>NO</label><br><br>
 
               <h4 for="nameTextField"><%= takesurvey.q2 %></h4>
-              <input name="q2" type="radio" value="yes">
+              <input name="a2" type="radio" value="yes">
               <label>YES</label><br>
-              <input name="q2" type="radio" value="yes">
+              <input name="a2" type="radio" value="no">
               <label>NO</label><br><br>
 
               <h4 for="nameTextField"><%= takesurvey.q3 %></h4>
-              <input name="q3" type="radio" value="yes">
+              <input name="a3" type="radio" value="yes">
               <label>YES</label><br>
-              <input name="q3" type="radio" value="yes">
+              <input name="a3" type="radio" value="no">
               <label>NO</label><br><br> 
             </div>
-            <a href="/survey"><input type="button" value="Submit"></a>
+            <button class="btn btn-primary" type="submit">
+              <i class="fas fa-edit"></i>Submit
+            </button>
           </form>
       </div>
     </div>

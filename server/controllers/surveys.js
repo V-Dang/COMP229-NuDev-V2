@@ -35,6 +35,49 @@ module.exports.displayTakeSurveyPage = (req, res, next) => {
     });
 };
 
+module.exports.processTakeSurveyPage = (req, res, next) => {
+  let id = req.params.id;
+  
+  let takeASurvey = Survey({
+   "_id": id,
+   "survey_name": req.body.survey_name,
+   "survey_subject": req.body.survey_subject,
+   "q1": req.body.q1,
+   "q2": req.body.q2,
+   "q3": req.body.q3,
+   "a1": req.body.a1,
+   "a2": req.body.a2,
+   "a3": req.body.a3,
+  });
+  Survey.updateOne({_id:id}, takeASurvey, (err) => {
+    if(err)
+  {
+      console.log(err);
+      res.end(err);
+  }
+    else
+  {
+      
+      //refresh the survey list
+      //res.redirect("/survey");
+      let id = req.params.id;
+      Survey.findById(id, (err, SurveyAnswer) => {
+        if(err)
+        {
+          console.log(err);
+          res.end(err);
+        }
+        else
+        {
+// show the answer view
+        res.render("surveys/answer", {title: "Survey Answer", surveyAnswer:SurveyAnswer})
+        }
+      });
+  }
+  });
+}
+
+
 module.exports.displayEditSurveyPage = (req, res, next) => {
     let id = req.params.id;
         Survey.findById(id, (err, Editsurvey) => {
@@ -57,6 +100,9 @@ module.exports.processEditSurveyPage = (req, res, next) => {
      "q1": req.body.q1,
      "q2": req.body.q2,
      "q3": req.body.q3,
+     "a1": req.body.a1,
+     "a2": req.body.a2,
+     "a3": req.body.a3,
     });
     Survey.updateOne({_id:id}, updateSurvey, (err) => {
       if(err)
@@ -72,6 +118,22 @@ module.exports.processEditSurveyPage = (req, res, next) => {
 });
 }
 
+module.exports.displayAnswerPage = (req, res, next) => {
+  let id = req.params.id;
+  Survey.findById(id, (err, SurveyAnswer) => {
+    if(err)
+    {
+      console.log(err);
+      res.end(err);
+    }
+    else
+    {
+// show the answer view
+res.render("surveys/answer", {title: "Survey Answer", surveyAnswer:SurveyAnswer})
+    }
+  });
+}; 
+
 
 module.exports.addpage = (req, res, next) => {
     res.render("surveys/add", {title: "Create a Survey"
@@ -85,6 +147,9 @@ module.exports.addpage = (req, res, next) => {
         "q1": req.body.q1,
         "q2": req.body.q2,
         "q3": req.body.q3,
+        "a1": "no",
+        "a2": "no",
+        "a3": "no",
     });
     Survey.create(newSurvey, (err, survey) => {
       if(err)
