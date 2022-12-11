@@ -18,16 +18,16 @@
 
 
         <% if (title == "Take Survey") { %>
-        <li class="nav-item active">
-        <% } else  { %>
-        <li class="nav-item">
-        <% } %>
-        <% if(typeof displayName == 'string' && displayName) { %>
-          <a class="nav-link" href="/survey"><i class="fab fa-elementor"></i> Take Survey </a>
+          <li class="nav-item active">
           <% } else  { %>
-            <a class="nav-link" href="/login"><i class="fas fa-user-cog"></i> Take Survey </a>
+          <li class="nav-item">
           <% } %>
-        </li>
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <a class="nav-link" href="/survey"><i class="fab fa-elementor"></i> Take Survey </a>
+            <% } else  { %>
+              <a class="nav-link" href="/survey"><i class="fas fa-user-cog"></i> Take Survey </a>
+            <% } %>
+          </li>
 
         <% if (title == "Create Survey") { %>
         <li class="nav-item active">
