@@ -1,62 +1,62 @@
 .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: url('https://venngage-wordpress.s3.amazonaws.com/uploads/2016/04/survey.png');
-    /* Set a specific height */
-    
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url('https://venngage-wordpress.s3.amazonaws.com/uploads/2016/04/survey.png');
+  /* Set a specific height */
   
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-color:black;
-  }
 
-  #navbarSupportedContent{
-    width:900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding:  10px 10px 10px;
-    font-family: verdana;
-    box-shadow: 5px 5px 5px #8de0ed;
-    border-radius: 15px;  
-    background-color: rgb(83, 203, 227);
-    color: rgb(2, 2, 2);
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color:black;
+}
+
+#navbarSupportedContent{
+  width:900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:  10px 10px 10px;
+  font-family: verdana;
+  box-shadow: 5px 5px 5px #8de0ed;
+  border-radius: 15px;  
+  background-color: rgb(83, 203, 227);
+  color: rgb(2, 2, 2);
 }
 
 
 h6{
-  width:450px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 10px 10px 10px;
-  font-family: verdana;
-  box-shadow: 5px 5px 5px 5px #8de0ed;
-  border-radius: 15px;  
-  background-color: rgb(83, 203, 227);
-  color: rgb(247, 246, 248);
-  
+width:450px;
+margin-left: auto;
+margin-right: auto;
+padding: 10px 10px 10px 10px;
+font-family: verdana;
+box-shadow: 5px 5px 5px 5px #8de0ed;
+border-radius: 15px;  
+background-color: rgb(83, 203, 227);
+color: rgb(247, 246, 248);
+
 }
 h5{
-  width:450px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 10px 10px 10px;
-  font-family: verdana;
-  box-shadow: 5px 5px 5px 5px #8de0ed;
-  border-radius: 15px;  
-  background-color: rgb(83, 203, 227);
-  color: rgb(247, 246, 248);
-  
+width:450px;
+margin-left: auto;
+margin-right: auto;
+padding: 10px 10px 10px 10px;
+font-family: verdana;
+box-shadow: 5px 5px 5px 5px #8de0ed;
+border-radius: 15px;  
+background-color: rgb(83, 203, 227);
+color: rgb(247, 246, 248);
+
 }
 #title {
-  background-color:white;
-  color:rgb(138, 21, 21);
-  text-transform: capitalize;
-  text-align: center;
-  font-variant: small-caps;
-  border-radius: 5px;   
-  padding:3px 3px 3px 3px;
+background-color:white;
+color:rgb(138, 21, 21);
+text-transform: capitalize;
+text-align: center;
+font-variant: small-caps;
+border-radius: 5px;   
+padding:3px 3px 3px 3px;
 
 }
 
@@ -70,4 +70,57 @@ border-radius: 10px;
 padding:3px 3px 3px 3px;
 }
 
+h2{
+width:450px;
+margin-left: auto;
+margin-right: auto;
+padding: 10px 10px 10px 10px;
+font-family: verdana;
+box-shadow: 5px 5px 5px 5px #8de0ed;
+border-radius: 15px;  
+background-color: rgb(13, 164, 61);
+color: rgb(247, 246, 248);
 
+}
+
+h4{
+width:450px;
+margin-left: auto;
+margin-right: auto;
+padding: 10px 10px 10px 10px;
+font-family: verdana;
+box-shadow: 5px 5px 5px 5px #8de0ed;
+border-radius: 15px;  
+background-color: rgb(206, 21, 21);
+color: rgb(247, 246, 248);
+
+}
+
+/*label{
+width:500px;
+margin-right: 2000px;
+padding:  10px 10px;
+font-family: verdana;
+box-shadow: 5px  #8de0ed;
+border-radius: 15px;  
+background-color: rgb(83, 203, 227);
+color: rgb(2, 2, 2);
+padding-left: 5px;
+padding-right: 10px;
+
+}*/
+
+label {
+width: 200px;
+float: center ;
+text-align:center;
+padding-left: 10px;
+padding-left: 10px;
+padding-bottom: 30px;
+padding:  10px 10px;
+font-family: verdana;
+box-shadow: 5px  #8de0ed;
+border-radius: 15px;  
+background-color: rgb(83, 203, 227);
+color: rgb(2, 2, 2);
+}
