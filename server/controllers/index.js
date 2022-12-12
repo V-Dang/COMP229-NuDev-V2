@@ -130,7 +130,7 @@ module.exports.processRegisterPage = (req, res, next) => {
             //redirect the user and authenticate them
 
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/contact-list')
+                res.redirect('/')
             });
         }
     });
