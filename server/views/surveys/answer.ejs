@@ -15,22 +15,26 @@
         
         <br />
 
-        <form class="form" method="post">
-            <div class="from-group">
-              <h4 for="nameTextField"><%= surveyAnswer.q1 %></h4>
-              <h6 for="a1"><%= surveyAnswer.a1 %></h6>
+        <form action="mailto:" method="post" enctype="text/plain" name="form">
+              <h4>Question 1: </h4>
+              <h6><input type="text" name="Question 1" value="<%=surveyAnswer.q1%>" readonly></h6><br>
+              <h4>Answer 1: </h4>
+              <h6><input type="text" name="Answer 1" value="<%=surveyAnswer.a1%>" readonly></h6><hr><br><br>
+              
+              <h4>Question 2: </h4>
+              <h6><input type="text" name="Question 2" value="<%=surveyAnswer.q2%>" readonly><br></h6>
+              <h4>Answer 2: </h4>
+              <h6><input type="text" name="Answer 2" value="<%=surveyAnswer.a2%>" readonly></h6><hr><br><br>
 
+              <h4>Question 3: </h4>
+              <h6><input type="text" name="Question 3" value="<%=surveyAnswer.q3%>" readonly></h6><br>
+              <h4>Answer 3: </h4>
+              <h6><input type="text" name="Answer 3" value="<%=surveyAnswer.a3%>" readonly></h6><br><br>
 
-              <h4 for="nameTextField"><%= surveyAnswer.q2 %></h4>
-              <h6 for="a2"><%= surveyAnswer.a2 %></h6>
-
-
-              <h4 for="nameTextField"><%= surveyAnswer.q3 %></h4>
-              <h6 for="a3"><%= surveyAnswer.a3 %></h6>
-
-            </div>
-            <a href="/survey"><input type="button" value="Submit"></a>
+            <input type="submit" value="Email Results">
+            <a href="/survey"><input type="button" value="Cancel"></a>
           </form>
+
       </div>
     </div>
   </main>
